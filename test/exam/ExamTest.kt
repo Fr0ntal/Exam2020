@@ -12,6 +12,12 @@ internal class ExamTest {
 
     @Test
     fun testMyExamTask() {
-        myExamTask()
+        assertEquals(listOf("Вымыть пол", "Приготовить еду"), foo("test.txt", limit = 90))
+        assertEquals(listOf("a","b"), foo("text2.txt", limit = 5))
+        assertEquals(listOf("a","b"), foo("text2.txt", limit = 90))
     }
+}
+@Test
+fun foo(){
+    assertEquals(listOf("Вымыть пол", "Приготовить еду"), foo("example.txt", limit = 90))
 }
